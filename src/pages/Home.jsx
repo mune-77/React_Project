@@ -167,7 +167,7 @@ const products = [
 const Home = () => {
     return(
         <div className="container mt-4">
-            <h2>Our Products</h2>
+            <h2 className="mb-4 mt-5 text-center">Our Products</h2>
             <ProductList products={products} />
         </div>
     );
