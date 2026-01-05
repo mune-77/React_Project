@@ -49,7 +49,14 @@ const Navbar = () => {
               {" "}
               <FaShoppingCart /> Cart
               {totalItems > 0 && (
-                <Badge pill bg="danger" className="posaition-absolute top-0 start-100 translate-middle badge  rounded-pill" style={{fontSize:'0.8rem'}}>{totalItems}</Badge>
+                <Badge
+                  pill
+                  bg="danger"
+                  className="posaition-absolute top-0 start-100 translate-middle badge  rounded-pill"
+                  style={{ fontSize: "0.8rem" }}
+                >
+                  {totalItems}
+                </Badge>
               )}
             </Nav.Link>
           </Nav>

@@ -42,7 +42,7 @@ export const CartProvider = ({ children }) => {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-
+  
   return (
     <CartContext.Provider
       value={{
