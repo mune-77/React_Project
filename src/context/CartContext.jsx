@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
     });
   };
   const removeFromCart = (productId) => {
-    setCart.filter((item) => item.id !== productId);
+    setCart(cart.filter((item) => item.id !== productId));
   };
   const updateQuantity = (productId, newQuantity) => {
     if (newQuantity < 1) return;

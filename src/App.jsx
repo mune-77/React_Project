@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from "./components/Navbar";
+import Checkout from "./pages/Checkout";
 function App() {
 
 
@@ -16,6 +17,7 @@ function App() {
     <div className="container mt-4">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </div>
   </Router>

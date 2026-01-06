@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProductList from "../components/ProductList";
 const products =
 [
@@ -164,10 +165,24 @@ const products =
 ];
 
 const Home = () => {
+
+  const [searchTerm, setSearchTerm] = useState('');
+const filteredProducts = products.filter((product) => 
+product.name.toLowerCase().includes(searchTerm.toLowerCase())
+)
+
     return(
         <div className="container mt-4">
             <h2 className="mb-4 mt-5 text-center">Our Products</h2>
-            <ProductList products={products} />
+            <div className="mb-4">
+              <input type="text"
+              className="form-control"
+              placeholder="Search for Products..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            <ProductList products={filteredProducts} />
         </div>
     );
 };
